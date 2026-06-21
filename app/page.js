@@ -51,11 +51,11 @@ const calculators = [
     href: "/calculators/phone-power-bank-charges",
   },
   {
-  label: "Apartment Kit",
-  title: "Apartment Outage Kit Builder",
-  text: "Build a compact, renter-safe kit for lighting, water, food, charging and comfort.",
-  href: "/calculators/apartment-outage-kit-builder",
-},
+    label: "Apartment Kit",
+    title: "Apartment Outage Kit Builder",
+    text: "Build a compact, renter-safe kit for lighting, water, food, charging and comfort.",
+    href: "/calculators/apartment-outage-kit-builder",
+  },
 ];
 
 const guides = [
@@ -115,6 +115,13 @@ const steps = [
   },
 ];
 
+const checklistItems = [
+  "Backup power planning",
+  "Food and fridge safety",
+  "Wi-Fi and phone charging",
+  "Apartment-safe outage kit basics",
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-950">
@@ -156,16 +163,16 @@ export default function Home() {
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               <div className="rounded-3xl border border-slate-200 bg-white/80 p-5 shadow-sm">
                 <p className="text-3xl font-black text-blue-600">5</p>
-<p className="mt-1 text-sm font-bold text-slate-600">
-  Calculators built
-</p>
+                <p className="mt-1 text-sm font-bold text-slate-600">
+                  Calculators built
+                </p>
               </div>
 
               <div className="rounded-3xl border border-slate-200 bg-white/80 p-5 shadow-sm">
                 <p className="text-3xl font-black text-blue-600">8</p>
-<p className="mt-1 text-sm font-bold text-slate-600">
-  Core guides
-</p>
+                <p className="mt-1 text-sm font-bold text-slate-600">
+                  Core guides
+                </p>
               </div>
 
               <div className="rounded-3xl border border-slate-200 bg-white/80 p-5 shadow-sm">
@@ -212,6 +219,7 @@ export default function Home() {
                           {purpose}
                         </p>
                       </div>
+
                       <p className="text-right text-sm font-black text-yellow-300">
                         {size}
                       </p>
@@ -224,6 +232,7 @@ export default function Home() {
                 <p className="font-black text-blue-100">
                   Start with watt-hours, not guesses.
                 </p>
+
                 <p className="mt-2 text-sm leading-6 text-slate-300">
                   A power station that looks big may still be too small for a
                   fridge. Estimate the load first, then compare products.
@@ -275,9 +284,7 @@ export default function Home() {
 
               <p className="mt-3 leading-7 text-slate-600">{item.text}</p>
 
-              <p className="mt-5 font-black text-blue-600">
-                Explore →
-              </p>
+              <p className="mt-5 font-black text-blue-600">Explore →</p>
             </a>
           ))}
         </div>
@@ -351,7 +358,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {calculators.map((calculator) => (
               <a
                 key={calculator.title}
@@ -370,9 +377,7 @@ export default function Home() {
                   {calculator.text}
                 </p>
 
-                <p className="mt-6 font-black text-yellow-300">
-                  Open tool →
-                </p>
+                <p className="mt-6 font-black text-yellow-300">Open tool →</p>
               </a>
             ))}
           </div>
@@ -402,15 +407,15 @@ export default function Home() {
 
           <div className="max-w-xl">
             <p className="leading-7 text-slate-600">
-              Start with these featured guides, then visit the full guide library
-for all 8 outage planning resources.
+              Start with these featured guides, then visit the full guide
+              library for all 8 outage planning resources.
             </p>
 
             <a
               href="/guides"
               className="mt-4 inline-flex font-black text-blue-600 hover:text-blue-800"
             >
-              Browse all guides →
+              Browse all 8 guides →
             </a>
           </div>
         </div>
@@ -486,33 +491,50 @@ for all 8 outage planning resources.
             </p>
 
             <h2 className="mt-4 text-4xl font-black tracking-tight">
-              Build a Smarter Outage Kit
+              Outage Checklist Coming Soon
             </h2>
 
             <p className="mt-5 leading-8 text-blue-50">
-              Get a simple room-by-room checklist for lighting, phone charging,
-              fridge backup, water, food, Wi-Fi and essential devices.
+              A printable outage checklist will be added once the final domain,
+              email setup and download delivery are connected.
             </p>
 
-            <form className="mt-8 grid gap-3 rounded-3xl bg-white p-3 sm:grid-cols-[1fr_auto]">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="min-h-12 rounded-2xl px-5 text-slate-950 outline-none"
-              />
+            <div className="mt-8 rounded-3xl bg-white p-5 text-slate-950">
+              <p className="text-sm font-black uppercase tracking-[0.18em] text-blue-600">
+                What it will include
+              </p>
 
-              <button
-                type="button"
-                className="rounded-2xl bg-slate-950 px-6 py-3 font-black text-white transition hover:bg-blue-800"
+              <div className="mt-5 grid gap-4">
+                {checklistItems.map((item) => (
+                  <div
+                    key={item}
+                    className="flex gap-4 rounded-2xl bg-slate-50 p-4"
+                  >
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-sm font-black text-slate-950">
+                      ✓
+                    </span>
+
+                    <p className="font-bold text-slate-700">{item}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="/calculators"
+                className="rounded-full bg-white px-7 py-4 text-center text-sm font-black text-blue-700 transition hover:-translate-y-1"
               >
-                Get Checklist
-              </button>
-            </form>
+                Use Calculators
+              </a>
 
-            <p className="mt-4 text-sm text-blue-100">
-              Placeholder form for now. We’ll connect this later when the site
-              is ready.
-            </p>
+              <a
+                href="/guides"
+                className="rounded-full border border-blue-300 px-7 py-4 text-center text-sm font-black text-white transition hover:-translate-y-1 hover:bg-blue-700"
+              >
+                Browse Guides
+              </a>
+            </div>
           </div>
         </div>
       </section>

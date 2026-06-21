@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "About Outage Ready Home | Backup Power Guides",
+  title: "About Outage Ready Home",
   description:
     "Learn about Outage Ready Home, a practical resource for backup power guides, outage calculators, refrigerator backup, emergency lighting and apartment outage kits.",
 };

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Editorial Policy | Outage Ready Home",
+  title: "Editorial Policy",
   description:
     "Learn how Outage Ready Home creates practical, safety-focused backup power guides, calculators and product comparison content.",
 };

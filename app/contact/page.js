@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Contact Outage Ready Home | Backup Power Guides",
+  title: "Contact",
   description:
     "Contact Outage Ready Home for questions about backup power guides, outage calculators, editorial feedback and partnership inquiries.",
 };

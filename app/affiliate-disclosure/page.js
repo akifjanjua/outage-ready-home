@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Affiliate Disclosure | Outage Ready Home",
+  title: "Affiliate Disclosure",
   description:
     "Read the affiliate disclosure for Outage Ready Home, including how affiliate links may be used in backup power guides and product comparison content.",
 };

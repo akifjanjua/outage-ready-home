@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy Policy | Outage Ready Home",
+  title: "Privacy Policy",
   description:
     "Read the privacy policy for Outage Ready Home, including information about analytics, contact forms, email collection, cookies and affiliate links.",
 };
