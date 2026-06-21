@@ -129,57 +129,70 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-white px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
-              Contact Readiness
-            </p>
+  <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+    <div>
+      <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
+        Before You Contact
+      </p>
 
-            <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
-              Ready for Final Domain Setup
-            </h2>
+      <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
+        Help Us Keep the Guides Useful
+      </h2>
 
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              This contact page is structured for the final site owner. Once the
-              custom domain is connected, the prepared email addresses can be
-              activated and linked to a real inbox or form service.
-            </p>
+      <p className="mt-5 text-lg leading-8 text-slate-600">
+        The best messages include the guide or calculator you are referring to,
+        what seemed unclear, and any correction or suggestion you want reviewed.
+      </p>
 
-            <div className="mt-8 rounded-[2rem] bg-slate-950 p-7 text-white">
-              <p className="font-black text-yellow-300">Current setup</p>
+      <div className="mt-8 rounded-[2rem] bg-slate-950 p-7 text-white">
+        <p className="font-black text-yellow-300">Helpful note</p>
 
-              <p className="mt-3 leading-8 text-slate-300">
-                The page is intentionally designed without a fake form. This
-                avoids broken submissions while keeping the contact structure
-                ready for a real domain, inbox and form handler.
-              </p>
+        <p className="mt-3 leading-8 text-slate-300">
+          Outage Ready Home provides planning information only. Always check
+          product manuals, manufacturer safety instructions and local guidance
+          before using backup power equipment.
+        </p>
+      </div>
+    </div>
+
+    <div className="grid gap-5">
+      {[
+        {
+          number: "01",
+          title: "Mention the page",
+          text: "Include the guide, calculator or topic your message is about.",
+        },
+        {
+          number: "02",
+          title: "Share the issue clearly",
+          text: "For corrections, include what should be changed and why.",
+        },
+        {
+          number: "03",
+          title: "Keep safety details specific",
+          text: "For safety feedback, mention the device type, use case or outage situation.",
+        },
+      ].map((step) => (
+        <div
+          key={step.number}
+          className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6"
+        >
+          <div className="flex gap-5">
+            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-yellow-300 text-lg font-black text-slate-950">
+              {step.number}
+            </div>
+
+            <div>
+              <h3 className="text-xl font-black">{step.title}</h3>
+
+              <p className="mt-2 leading-7 text-slate-600">{step.text}</p>
             </div>
           </div>
-
-          <div className="grid gap-5">
-            {setupSteps.map((step) => (
-              <div
-                key={step.number}
-                className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6"
-              >
-                <div className="flex gap-5">
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-yellow-300 text-lg font-black text-slate-950">
-                    {step.number}
-                  </div>
-
-                  <div>
-                    <h3 className="text-xl font-black">{step.title}</h3>
-
-                    <p className="mt-2 leading-7 text-slate-600">
-                      {step.text}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-[2.25rem] border border-slate-200 bg-white p-8 shadow-sm md:p-12">
