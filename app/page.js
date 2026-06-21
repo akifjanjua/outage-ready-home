@@ -483,59 +483,81 @@ export default function Home() {
           </div>
 
           <div
-            id="checklist"
-            className="rounded-[2.25rem] bg-blue-600 p-8 text-white"
-          >
-            <p className="font-bold uppercase tracking-[0.2em] text-blue-100">
-              Free Checklist
-            </p>
+  id="checklist"
+  className="rounded-[2.25rem] bg-blue-600 p-8 text-white"
+>
+  <p className="font-bold uppercase tracking-[0.2em] text-blue-100">
+    Quick Start
+  </p>
 
-            <h2 className="mt-4 text-4xl font-black tracking-tight">
-              Outage Checklist Coming Soon
-            </h2>
+  <h2 className="mt-4 text-4xl font-black tracking-tight">
+    Build Your Outage Plan in 3 Steps
+  </h2>
 
-            <p className="mt-5 leading-8 text-blue-50">
-              A printable outage checklist will be added once the final domain,
-              email setup and download delivery are connected.
-            </p>
+  <p className="mt-5 leading-8 text-blue-50">
+    Start with the essentials, estimate your backup power needs, then use the
+    guides to choose a safer setup for your home or apartment.
+  </p>
 
-            <div className="mt-8 rounded-3xl bg-white p-5 text-slate-950">
-              <p className="text-sm font-black uppercase tracking-[0.18em] text-blue-600">
-                What it will include
-              </p>
+  <div className="mt-8 grid gap-4">
+    {[
+      {
+        step: "01",
+        title: "Estimate battery size",
+        text: "Use the calculator to understand watt-hours before buying gear.",
+        href: "/calculators/power-station-size",
+      },
+      {
+        step: "02",
+        title: "Plan fridge and Wi-Fi backup",
+        text: "Check runtime needs for food safety, internet and phone charging.",
+        href: "/calculators",
+      },
+      {
+        step: "03",
+        title: "Build a practical kit",
+        text: "Add lights, water, charging, food and apartment-safe essentials.",
+        href: "/guides/apartment-power-outage-kit",
+      },
+    ].map((item) => (
+      <a
+        key={item.step}
+        href={item.href}
+        className="group rounded-3xl bg-white p-5 text-slate-950 transition hover:-translate-y-1 hover:shadow-xl"
+      >
+        <div className="flex gap-4">
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-yellow-300 font-black text-slate-950">
+            {item.step}
+          </span>
 
-              <div className="mt-5 grid gap-4">
-                {checklistItems.map((item) => (
-                  <div
-                    key={item}
-                    className="flex gap-4 rounded-2xl bg-slate-50 p-4"
-                  >
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-sm font-black text-slate-950">
-                      ✓
-                    </span>
+          <div>
+            <h3 className="font-black group-hover:text-blue-600">
+              {item.title}
+            </h3>
 
-                    <p className="font-bold text-slate-700">{item}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-7 flex flex-col gap-4 sm:flex-row">
-              <a
-                href="/calculators"
-                className="rounded-full bg-white px-7 py-4 text-center text-sm font-black text-blue-700 transition hover:-translate-y-1"
-              >
-                Use Calculators
-              </a>
-
-              <a
-                href="/guides"
-                className="rounded-full border border-blue-300 px-7 py-4 text-center text-sm font-black text-white transition hover:-translate-y-1 hover:bg-blue-700"
-              >
-                Browse Guides
-              </a>
-            </div>
+            <p className="mt-2 leading-7 text-slate-600">{item.text}</p>
           </div>
+        </div>
+      </a>
+    ))}
+  </div>
+
+  <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+    <a
+      href="/calculators"
+      className="rounded-full bg-white px-7 py-4 text-center text-sm font-black text-blue-700 transition hover:-translate-y-1"
+    >
+      Use Calculators
+    </a>
+
+    <a
+      href="/guides"
+      className="rounded-full border border-blue-300 px-7 py-4 text-center text-sm font-black text-white transition hover:-translate-y-1 hover:bg-blue-700"
+    >
+      Browse Guides
+    </a>
+  </div>
+</div>
         </div>
       </section>
     </main>
