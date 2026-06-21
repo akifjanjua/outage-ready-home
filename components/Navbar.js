@@ -60,7 +60,7 @@ export default function Navbar() {
             href="/#checklist"
             className="hidden rounded-full bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-600 md:inline-flex"
           >
-            Start Checklist
+            Quick Start
           </a>
 
           <button
