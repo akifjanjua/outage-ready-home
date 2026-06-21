@@ -19,7 +19,7 @@ const contactOptions = [
   },
   {
     title: "Partnerships",
-    text: "For future affiliate, sponsorship or product research conversations.",
+    text: "For affiliate, sponsorship, product research or collaboration conversations.",
     email: "partners@outagereadyhome.com",
     icon: "🤝",
   },
@@ -34,21 +34,21 @@ const responseTopics = [
   "General outage-prep questions",
 ];
 
-const setupSteps = [
+const helpfulSteps = [
   {
     number: "01",
-    title: "Connect the custom domain",
-    text: "Point the final domain to the site so the brand uses a clean, professional URL.",
+    title: "Mention the page",
+    text: "Include the guide, calculator or topic your message is about.",
   },
   {
     number: "02",
-    title: "Set up domain email",
-    text: "Create contact, editorial and partner email addresses for the final domain.",
+    title: "Share the issue clearly",
+    text: "For corrections, include what should be changed and why.",
   },
   {
     number: "03",
-    title: "Connect a form handler",
-    text: "Use Formspree, Resend, EmailJS or another service if a working contact form is needed.",
+    title: "Keep safety details specific",
+    text: "For safety feedback, mention the device type, use case or outage situation.",
   },
 ];
 
@@ -69,8 +69,7 @@ export default function ContactPage() {
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
             Questions, corrections, suggestions and partnership inquiries can
-            be routed through the contact channels prepared for the final custom
-            domain setup.
+            be sent through the contact channels below.
           </p>
 
           <div className="mt-9 flex flex-col justify-center gap-4 sm:flex-row">
@@ -95,7 +94,7 @@ export default function ContactPage() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm font-bold text-slate-300 md:flex-row md:items-center md:justify-between">
           <p>Guide feedback</p>
           <p>Corrections and suggestions</p>
-          <p>Future partnership inquiries</p>
+          <p>Partnership inquiries</p>
         </div>
       </section>
 
@@ -116,12 +115,15 @@ export default function ContactPage() {
 
               <div className="mt-6 rounded-2xl bg-slate-50 p-4">
                 <p className="text-xs font-black uppercase tracking-wide text-slate-500">
-                  Prepared email
+                  Contact email
                 </p>
 
-                <p className="mt-1 break-words font-black text-blue-600">
+                <a
+                  href={`mailto:${option.email}`}
+                  className="mt-1 inline-flex break-all font-black text-blue-600 hover:text-blue-800"
+                >
                   {option.email}
-                </p>
+                </a>
               </div>
             </div>
           ))}
@@ -129,70 +131,57 @@ export default function ContactPage() {
       </section>
 
       <section className="bg-white px-6 py-20">
-  <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-    <div>
-      <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
-        Before You Contact
-      </p>
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
+              Before You Contact
+            </p>
 
-      <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
-        Help Us Keep the Guides Useful
-      </h2>
+            <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
+              Help Us Keep the Guides Useful
+            </h2>
 
-      <p className="mt-5 text-lg leading-8 text-slate-600">
-        The best messages include the guide or calculator you are referring to,
-        what seemed unclear, and any correction or suggestion you want reviewed.
-      </p>
+            <p className="mt-5 text-lg leading-8 text-slate-600">
+              The best messages include the guide or calculator you are
+              referring to, what seemed unclear and any correction or suggestion
+              you want reviewed.
+            </p>
 
-      <div className="mt-8 rounded-[2rem] bg-slate-950 p-7 text-white">
-        <p className="font-black text-yellow-300">Helpful note</p>
+            <div className="mt-8 rounded-[2rem] bg-slate-950 p-7 text-white">
+              <p className="font-black text-yellow-300">Helpful note</p>
 
-        <p className="mt-3 leading-8 text-slate-300">
-          Outage Ready Home provides planning information only. Always check
-          product manuals, manufacturer safety instructions and local guidance
-          before using backup power equipment.
-        </p>
-      </div>
-    </div>
-
-    <div className="grid gap-5">
-      {[
-        {
-          number: "01",
-          title: "Mention the page",
-          text: "Include the guide, calculator or topic your message is about.",
-        },
-        {
-          number: "02",
-          title: "Share the issue clearly",
-          text: "For corrections, include what should be changed and why.",
-        },
-        {
-          number: "03",
-          title: "Keep safety details specific",
-          text: "For safety feedback, mention the device type, use case or outage situation.",
-        },
-      ].map((step) => (
-        <div
-          key={step.number}
-          className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6"
-        >
-          <div className="flex gap-5">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-yellow-300 text-lg font-black text-slate-950">
-              {step.number}
-            </div>
-
-            <div>
-              <h3 className="text-xl font-black">{step.title}</h3>
-
-              <p className="mt-2 leading-7 text-slate-600">{step.text}</p>
+              <p className="mt-3 leading-8 text-slate-300">
+                Outage Ready Home provides planning information only. Always
+                check product manuals, manufacturer safety instructions and
+                local guidance before using backup power equipment.
+              </p>
             </div>
           </div>
+
+          <div className="grid gap-5">
+            {helpfulSteps.map((step) => (
+              <div
+                key={step.number}
+                className="rounded-[2rem] border border-slate-200 bg-slate-50 p-6"
+              >
+                <div className="flex gap-5">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-yellow-300 text-lg font-black text-slate-950">
+                    {step.number}
+                  </div>
+
+                  <div>
+                    <h3 className="text-xl font-black">{step.title}</h3>
+
+                    <p className="mt-2 leading-7 text-slate-600">
+                      {step.text}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="rounded-[2.25rem] border border-slate-200 bg-white p-8 shadow-sm md:p-12">
@@ -203,13 +192,12 @@ export default function ContactPage() {
               </p>
 
               <h2 className="mt-4 text-4xl font-black tracking-tight">
-                What This Page Supports
+                What You Can Contact Us About
               </h2>
 
               <p className="mt-5 leading-8 text-slate-600">
-                Once email delivery is connected, this page can support reader
-                feedback, correction requests, product research updates and
-                future affiliate partnership conversations.
+                Feedback helps make the site more useful, accurate and practical
+                for real outage situations.
               </p>
             </div>
 

@@ -1,41 +1,42 @@
 export const metadata = {
   title: "Privacy Policy",
   description:
-    "Read the privacy policy for Outage Ready Home, including information about analytics, contact forms, email collection, cookies and affiliate links.",
+    "Read the Outage Ready Home privacy policy, including information about site usage, contact information, analytics, cookies and affiliate links.",
 };
 
-const privacySections = [
+const policySections = [
   {
-    title: "Information You May Provide",
-    text: "If you contact us, join an email list or submit a form in the future, you may provide information such as your name, email address and message details.",
+    title: "Information We May Collect",
+    text: "Outage Ready Home may collect limited information that visitors choose to provide, such as a name, email address or message if a contact form, email signup or feedback feature is added. The site may also collect basic usage information through analytics tools if they are enabled.",
   },
   {
-    title: "Automatically Collected Information",
-    text: "Like many websites, Outage Ready Home may collect basic usage information such as pages visited, browser type, device type, referring pages and general interaction data.",
+    title: "How Information May Be Used",
+    text: "Information may be used to respond to inquiries, improve guides and calculators, understand site performance, maintain security, review corrections and improve the overall reader experience.",
   },
   {
     title: "Cookies and Analytics",
-    text: "The site may use cookies or analytics tools in the future to understand page traffic, improve guides and measure how visitors use the website.",
+    text: "The site may use cookies or similar technologies if analytics, affiliate tracking, advertising or performance tools are added. These tools can help understand which pages are useful and how visitors move through the site.",
   },
   {
     title: "Affiliate Links",
-    text: "Some pages may include affiliate links. Affiliate partners may use tracking methods to identify qualifying purchases.",
+    text: "Outage Ready Home may include affiliate links in the future. If visitors click those links or make purchases through them, affiliate partners may use cookies or tracking technologies according to their own policies.",
   },
-];
-
-const uses = [
-  "To respond to messages or contact requests.",
-  "To improve guides, calculators and website usability.",
-  "To understand which pages are useful to readers.",
-  "To manage future email checklist or newsletter features.",
-  "To monitor affiliate link performance if affiliate links are added.",
-];
-
-const rights = [
-  "You may contact us to request correction or deletion of information you provided directly.",
-  "You may unsubscribe from future email communication if an email list is added.",
-  "You may disable cookies in your browser settings.",
-  "You may choose not to submit contact forms or email signup forms.",
+  {
+    title: "Third-Party Services",
+    text: "The site may use third-party services for hosting, analytics, email delivery, form handling, affiliate tracking or performance monitoring. These services may process data according to their own privacy practices.",
+  },
+  {
+    title: "Data Protection",
+    text: "Reasonable steps should be taken to protect information submitted through the site. However, no website, email system or online service can guarantee complete security.",
+  },
+  {
+    title: "Children’s Privacy",
+    text: "This site is intended for general household planning information and is not directed toward children. It does not knowingly collect personal information from children.",
+  },
+  {
+    title: "Policy Updates",
+    text: "This policy may be updated when new features are added, such as analytics, email signup forms, contact forms, affiliate programs or advertising tools.",
+  },
 ];
 
 export default function PrivacyPolicyPage() {
@@ -50,16 +51,16 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <h1 className="mt-5 text-4xl font-black tracking-tight md:text-6xl">
-            How Outage Ready Home Handles Privacy
+            Privacy Policy
           </h1>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600">
-            This privacy policy explains what information Outage Ready Home may
-            collect, how it may be used and what choices visitors may have when
-            using the website.
+            This policy explains how Outage Ready Home may handle information
+            related to site usage, contact messages, analytics, cookies and
+            affiliate links.
           </p>
 
-          <p className="mx-auto mt-5 max-w-3xl text-sm font-bold uppercase tracking-wide text-slate-500">
+          <p className="mt-6 inline-flex rounded-full bg-blue-50 px-5 py-3 text-sm font-black text-blue-700">
             Last updated: June 2026
           </p>
         </div>
@@ -67,211 +68,82 @@ export default function PrivacyPolicyPage() {
 
       <section className="border-y border-slate-200 bg-slate-950 px-6 py-5 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 text-sm font-bold text-slate-300 md:flex-row md:items-center md:justify-between">
-          <p>Basic visitor privacy</p>
-          <p>Future analytics and forms</p>
-          <p>Affiliate tracking disclosure</p>
+          <p>Clear privacy language</p>
+          <p>Analytics and affiliate-ready</p>
+          <p>Update when new tools are added</p>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-          <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
-              Overview
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
-              A Simple Privacy Overview
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Outage Ready Home is a backup power and outage preparedness
-              website. Visitors can browse guides, use calculators and read
-              planning content without creating an account.
-            </p>
-
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              In the future, the site may include email signup forms, contact
-              forms, analytics tools and affiliate links. This page explains how
-              those features may involve basic data collection.
-            </p>
-
-            <div className="mt-8 rounded-[2rem] bg-slate-950 p-7 text-white">
-              <p className="font-black text-yellow-300">
-                Important placeholder note
-              </p>
-
-              <p className="mt-3 leading-8 text-slate-300">
-                This is a starter privacy policy for the website build. Before
-                serious public launch, paid ads, email collection or monetized
-                affiliate activity, this page should be reviewed and adjusted
-                for the tools actually used.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid gap-5 md:grid-cols-2">
-            {privacySections.map((section) => (
-              <div
-                key={section.title}
-                className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm"
-              >
-                <h3 className="text-xl font-black text-blue-700">
-                  {section.title}
-                </h3>
-
-                <p className="mt-3 leading-7 text-slate-600">
-                  {section.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white px-6 py-20">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
-              Use of Information
-            </p>
-
-            <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
-              How Information May Be Used
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-600">
-              Any information collected should be used to operate the site,
-              improve the content and respond to visitor requests.
-            </p>
-          </div>
-
-          <div className="grid gap-4">
-            {uses.map((item) => (
-              <div
-                key={item}
-                className="flex gap-4 rounded-3xl border border-slate-200 bg-slate-50 p-5"
-              >
-                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-xs font-black text-slate-950">
-                  ✓
-                </span>
-
-                <p className="leading-7 text-slate-700">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-20">
+      <section className="mx-auto max-w-5xl px-6 py-20">
         <div className="rounded-[2.25rem] border border-slate-200 bg-white p-8 shadow-sm md:p-12">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
-              <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
-                Cookies and Third Parties
-              </p>
+          <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
+            Overview
+          </p>
 
-              <h2 className="mt-4 text-4xl font-black tracking-tight">
-                Analytics, Forms and Affiliate Tools
-              </h2>
+          <h2 className="mt-4 text-4xl font-black tracking-tight">
+            How This Site Handles Privacy
+          </h2>
 
-              <p className="mt-5 leading-8 text-slate-600">
-                The site may use third-party services in the future, such as
-                analytics tools, contact form services, email tools or affiliate
-                programs. These services may process data according to their own
-                privacy policies.
-              </p>
-            </div>
-
-            <div className="rounded-[2rem] bg-slate-950 p-7 text-white">
-              <p className="font-black text-yellow-300">
-                Examples of possible future tools
-              </p>
-
-              <div className="mt-5 grid gap-3 text-slate-300">
-                <p>Google Analytics or similar traffic analytics</p>
-                <p>Email signup or newsletter tools</p>
-                <p>Contact form handling services</p>
-                <p>Affiliate networks or retailer tracking links</p>
-              </div>
-
-              <p className="mt-5 leading-7 text-slate-400">
-                We’ll update this policy when the final live tools are selected.
-              </p>
-            </div>
-          </div>
+          <p className="mt-5 leading-8 text-slate-600">
+            Outage Ready Home is designed to provide practical backup power and
+            outage-planning information. Visitors can browse guides and use
+            calculators without creating an account. If interactive features,
+            analytics, affiliate links or contact tools are added, this policy
+            should be reviewed and updated accordingly.
+          </p>
         </div>
-      </section>
 
-      <section className="bg-slate-950 px-6 py-20 text-white">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-          <div>
-            <p className="font-bold uppercase tracking-[0.2em] text-yellow-300">
-              Your Choices
-            </p>
+        <div className="mt-8 grid gap-6">
+          {policySections.map((section) => (
+            <section
+              key={section.title}
+              className="rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm"
+            >
+              <h2 className="text-2xl font-black">{section.title}</h2>
 
-            <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
-              Visitor Privacy Choices
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Visitors may have choices depending on what features are active on
-              the site, such as email signup, cookies or contact forms.
-            </p>
-          </div>
-
-          <div className="grid gap-4">
-            {rights.map((item) => (
-              <div
-                key={item}
-                className="flex gap-4 rounded-3xl border border-slate-800 bg-slate-900 p-5"
-              >
-                <span className="mt-1 flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-yellow-300 text-xs font-black text-slate-950">
-                  ✓
-                </span>
-
-                <p className="leading-7 text-slate-300">{item}</p>
-              </div>
-            ))}
-          </div>
+              <p className="mt-4 leading-8 text-slate-600">{section.text}</p>
+            </section>
+          ))}
         </div>
-      </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="rounded-[2.25rem] border border-slate-200 bg-white p-8 shadow-sm md:p-12">
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
-              <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
-                Contact
-              </p>
+        <section className="mt-8 rounded-[2rem] bg-slate-950 p-7 text-white md:p-10">
+          <p className="font-bold uppercase tracking-[0.2em] text-yellow-300">
+            Important Note
+          </p>
 
-              <h2 className="mt-4 text-4xl font-black tracking-tight">
-                Privacy Questions
-              </h2>
+          <h2 className="mt-4 text-3xl font-black tracking-tight">
+            Update This Policy When Features Change
+          </h2>
 
-              <p className="mt-5 leading-8 text-slate-600">
-                For questions about this privacy policy, contact forms, email
-                collection or data handling, use the contact page.
-              </p>
-            </div>
+          <p className="mt-5 leading-8 text-slate-300">
+            This policy should be updated whenever new tools are added, such as
+            analytics platforms, email signup forms, contact forms, advertising,
+            affiliate tracking, downloadable resources or user-submitted
+            content.
+          </p>
+        </section>
 
-            <div className="rounded-[2rem] bg-blue-600 p-7 text-white">
-              <p className="font-black text-blue-100">Contact page</p>
+        <section className="mt-8 rounded-[2rem] border border-slate-200 bg-white p-7 shadow-sm md:p-10">
+          <p className="font-bold uppercase tracking-[0.2em] text-blue-600">
+            Contact
+          </p>
 
-              <p className="mt-3 leading-8 text-blue-50">
-                Send privacy-related questions or correction requests through
-                the contact page.
-              </p>
+          <h2 className="mt-4 text-3xl font-black tracking-tight">
+            Questions About This Policy
+          </h2>
 
-              <a
-                href="/contact"
-                className="mt-6 inline-flex rounded-full bg-white px-7 py-4 text-sm font-black text-blue-700 transition hover:-translate-y-1"
-              >
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
+          <p className="mt-5 leading-8 text-slate-600">
+            Questions about this privacy policy can be sent through the contact
+            page.
+          </p>
+
+          <a
+            href="/contact"
+            className="mt-7 inline-flex rounded-full bg-blue-600 px-7 py-4 text-sm font-black text-white transition hover:-translate-y-1 hover:bg-blue-700"
+          >
+            Contact Outage Ready Home
+          </a>
+        </section>
       </section>
     </main>
   );
